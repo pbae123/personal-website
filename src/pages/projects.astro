@@ -1,0 +1,35 @@
+---
+// where projects will be held
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+---
+
+<Layout>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold mb-8">Projects</h1>
+
+    <div class="grid gap-6">
+      {projects.map((project) => (
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h2 class="text-xl font-semibold mb-2">{project.data.title}</h2>
+          <p class="text-gray-600 mb-4">{project.data.description}</p>
+          <div class="flex gap-2 mb-4">
+            {project.data.tags.map((tag) => (
+              <span class="text-sm bg-gray-100 px-2 py-1 rounded">{tag}</span>
+            ))}
+          </div>
+          <div class="flex gap-4">
+            {project.data.github && (
+              <a href={project.data.github} class="text-blue-600 hover:underline text-sm">GitHub</a>
+            )}
+            {project.data.demo && (
+              <a href={project.data.demo} class="text-blue-600 hover:underline text-sm">Live Demo</a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+</Layout>
