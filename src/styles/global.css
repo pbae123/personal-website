@@ -18,3 +18,8 @@ button {
 button * {
   cursor: pointer;
 }
+
+.theme-toggle-btn,
+.theme-toggle-btn * {
+  transition: none !important;
+}

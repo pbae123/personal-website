@@ -19,7 +19,8 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      style={{ cursor: "pointer", background: "none", border: "none", padding: 0, fontSize: "26px" }}
+      className="theme-toggle-btn hover:text-gray-400"
+      style={{ cursor: "pointer", background: "none", border: "none", padding: 0, fontSize: "26px", transition: "color 0ms" }}
     >
       <Classic toggled={isDark} duration={750} />
     </button>
