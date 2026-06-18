@@ -11,15 +11,29 @@ body {
   font-family: 'EB Garamond', serif;
 }
 
+a {
+  transition: none;
+}
+
+a:hover {
+  opacity: 0.5;
+  filter: brightness(3);
+}
+
 button {
   cursor: pointer;
+}
+
+.theme-toggle {
+  transition: none;
+}
+
+.theme-toggle:hover {
+  opacity: 0.5;
+  filter: brightness(3); /* 0 = black, 1 = normal, >1 = lighter */
 }
 
 button * {
   cursor: pointer;
 }
 
-.theme-toggle-btn,
-.theme-toggle-btn * {
-  transition: none !important;
-}

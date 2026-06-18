@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Classic } from "@theme-toggles/react";
 import "@theme-toggles/react/styles/classic.css";
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
+  const isMounted = useRef(false);
 
   useEffect(() => {
     setIsDark(document.documentElement.classList.contains("dark"));
+    isMounted.current = true;
   }, []);
 
   function toggle() {
@@ -19,10 +21,10 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="theme-toggle-btn hover:text-gray-400"
-      style={{ cursor: "pointer", background: "none", border: "none", padding: 0, fontSize: "26px", transition: "color 0ms" }}
+      className="theme-toggle"
+      style={{ cursor: "pointer", background: "none", border: "none", padding: 0, fontSize: "26px" }}
     >
-      <Classic toggled={isDark} duration={750} />
+      <Classic toggled={isDark} duration={isMounted.current ? 750 : 0} />
     </button>
   );
 }
