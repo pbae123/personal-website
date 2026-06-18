@@ -4,10 +4,14 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
   <main class="max-w-4xl mx-auto px-6 py-12">
-    <h1> Main </h1>
-    <nav class="flex gap-6 mt-6">
-      <a href="/projects" class="hover:text-gray-400 text-[26px]">Projects</a>
-      <a href="/contact" class="hover:text-gray-400 text-[26px]">Contact</a>
-    </nav>
+    <h1 class="font-bold text-[36px]"> About Me </h1>
+    <p class="mt-4 text-[24px]">I'm Peter, a rising junior at the University of Notre Dame studying CS and Econ.
+      My interests span from all things tech, to learning how businesses operate, to rock climbing, and just trying to enjoy life. 
+      I'm always learning and exploring new ideas. Check out some of these links:</p>
+    <ul class="list-disc mt-6 space-y-2 pl-15 marker:text-gray-400 [&_a]:underline">
+      <li><a href="/projects" class="text-[24px]">Projects</a></li>
+      <li><a href="/blog" class="text-[24px]">Thoughts</a></li>
+      <li><a href="/contact" class="text-[24px]">Contact</a></li>
+    </ul>
   </main>
 </Layout>
