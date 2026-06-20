@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<Layout>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <a href="/projects" class="hover:underline text-sm mb-8 block">← Back to Projects</a>
+    <h1 class="text-4xl font-bold mb-2">{project.data.title}</h1>
+    <p class="text-sm text-gray-400 mb-6">{project.data.year}</p>
+    <div class="flex gap-2 mb-6">
+      {project.data.tags.map((tag) => (
+        <span class="text-sm bg-gray-100 px-2 py-1 rounded">{tag}</span>
+      ))}
+    </div>
+    <div class="flex gap-4 mb-8">
+      {project.data.github && (
+        <a href={project.data.github} class="hover:underline text-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+      )}
+      {project.data.demo && (
+        <a href={project.data.demo} class="hover:underline text-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      )}
+    </div>
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+  </main>
+</Layout>
