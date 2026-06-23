@@ -24,7 +24,7 @@ export default function ThemeToggle() {
       className="theme-toggle"
       style={{ cursor: "pointer", background: "none", border: "none", padding: 0, fontSize: "26px" }}
     >
-      <Classic toggled={isDark} duration={isMounted.current ? 750 : 0} />
+      <Classic toggled={isDark || undefined} duration={isMounted.current ? 750 : 0} />
     </button>
   );
 }

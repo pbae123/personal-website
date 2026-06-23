@@ -6,17 +6,20 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
 
 const years = [2026, 2025, 2024];
-const byYear = (year: number) => projects.filter((p) => p.data.year === year);
+const byYear = (year: number) =>
+  projects
+    .filter((p) => p.data.year === year)
+    .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
 ---
 
 <Layout>
   <main class="max-w-4xl mx-auto px-6 py-12">
     <a href="/" class="hover:underline text-[16px] mb-8 block">← Let's go back home</a>
-    <h1 class="text-4xl font-bold mb-8">Projects</h1>
+    <h1 class="font-bold mb-8" style="font-size: 36px">Projects</h1>
 
     {years.map((year) => (
       <div class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4">{year}</h2>
+        <h2 class="font-semibold mb-4" style="font-size: 24px">{year}</h2>
         <hr class="border-t border-gray-300 mb-6" />
         {year === 2024 && (
           <p style="font-size: 22px;">Everyone starts somewhere.</p>
@@ -24,21 +27,28 @@ const byYear = (year: number) => projects.filter((p) => p.data.year === year);
         <div class="grid gap-6">
           {byYear(year).map((project) => (
             <div class="border border-gray-200 rounded-lg p-6">
-              <h2 class="text-xl font-semibold mb-2">
+              <h2 class="font-semibold mb-2" style="font-size: 22px">
                 <a href={`/projects/${project.id}`} class="hover:underline">{project.data.title}</a>
               </h2>
-              <p class="text-gray-600 mb-4">{project.data.description}</p>
+              <p class="text-gray-600 mb-4" style="font-size: 18px" set:html={project.data.description} />
               <div class="flex gap-2 mb-4">
                 {project.data.tags.map((tag) => (
-                  <span class="text-sm bg-gray-100 px-2 py-1 rounded">{tag}</span>
+                  <span class="bg-gray-100 px-2 py-1 rounded" style="font-size: 16px">{tag}</span>
                 ))}
               </div>
-              <div class="flex gap-4">
+              <div class="flex items-center gap-2">
                 {project.data.github && (
-                  <a href={project.data.github} class="hover:underline text-sm">GitHub</a>
+                  <a href={project.data.github} class="hover:underline" style="font-size: 16px" target="_blank" rel="noopener noreferrer">GitHub</a>
                 )}
-                {project.data.demo && (
-                  <a href={project.data.demo} class="hover:underline text-sm">Live Demo</a>
+                {project.data.demos && project.data.demos.map((d, i) => (
+                  <>
+                    {(i > 0 || project.data.github) && <span style="font-size: 16px">|</span>}
+                    <a href={d.url} class="hover:underline font-bold" style="font-size: 16px" target="_blank" rel="noopener noreferrer">{d.label}</a>
+                  </>
+                ))}
+                {project.data.demos && project.data.demos.length > 0 && project.data.semester && <span style="font-size: 16px">|</span>}
+                {project.data.semester && (
+                  <span class="font-bold" style="font-size: 16px">{project.data.semester}</span>
                 )}
               </div>
             </div>
