@@ -30,7 +30,7 @@ const byYear = (year: number) =>
               <h2 class="font-semibold mb-2" style="font-size: 22px">
                 <a href={`/projects/${project.id}`} class="hover:underline">{project.data.title}</a>
               </h2>
-              <p class="text-gray-600 mb-4" style="font-size: 18px" set:html={project.data.description} />
+              <p class="mb-4" style="font-size: 18px" set:html={project.data.description} />
               <div class="flex gap-2 mb-4">
                 {project.data.tags.map((tag) => (
                   <span class="bg-gray-100 px-2 py-1 rounded" style="font-size: 16px">{tag}</span>

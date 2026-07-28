@@ -43,8 +43,28 @@ import ThemeToggle from '../components/ThemeToggle.tsx';
     height: 100%;
   }
 
+  :global(.prose) {
+    --tw-prose-body: #000000;
+    --tw-prose-headings: #000000;
+    --tw-prose-bold: #000000;
+    --tw-prose-links: #000000;
+    --tw-prose-bullets: #000000;
+  }
+
   html.dark body {
     background-color: #100F0F;
-    color: #FFFCF0;
+    color: #e8eaed;
+  }
+
+  html.dark :global(.prose) {
+    --tw-prose-body: #e8eaed;
+    --tw-prose-headings: #e8eaed;
+    --tw-prose-bold: #e8eaed;
+    --tw-prose-links: #e8eaed;
+    --tw-prose-bullets: #e8eaed;
+  }
+
+  html.dark :global(.bg-gray-100) {
+    background-color: #2a2a2a;
   }
 </style>
