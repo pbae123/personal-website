@@ -24,7 +24,7 @@ const byYear = (year: number) =>
         {year === 2024 && (
           <p style="font-size: 22px;">Everyone starts somewhere.</p>
         )}
-        <div class="grid gap-6 max-h-[640px] overflow-y-auto pr-2 scroll-smooth">
+        <div class="grid gap-6 max-h-[640px] overflow-y-auto pr-2 scroll-smooth thin-scroll">
           {byYear(year).map((project) => (
             <div class="border border-gray-200 rounded-lg p-6">
               <h2 class="font-semibold mb-2" style="font-size: 22px">
@@ -58,3 +58,19 @@ const byYear = (year: number) =>
     ))}
   </main>
 </Layout>
+
+<style>
+  .thin-scroll {
+    scrollbar-width: thin;
+  }
+  .thin-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  .thin-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+  .thin-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>
