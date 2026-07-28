@@ -73,4 +73,11 @@ const byYear = (year: number) =>
   .thin-scroll::-webkit-scrollbar-track {
     background: transparent;
   }
+
+  :global(html.dark) .thin-scroll {
+    scrollbar-color: #e8eaed transparent;
+  }
+  :global(html.dark) .thin-scroll::-webkit-scrollbar-thumb {
+    background-color: #e8eaed;
+  }
 </style>
