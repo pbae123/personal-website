@@ -12,5 +12,7 @@ semester: Spring 2025
 ### My Thoughts: 
 - I thought this a cool opportunity. Got a taste at tech consulting, improved my ability to navigate PowerPoint, and practiced my pitching/presenting skills. Traveling to Chicago was fun, although it was strictly business, and touring Deloitte was pretty cool. 
 
-- **Competitive Landscape Research:** Researched and mapped the competitive AR/AI market landscape — including major industry players (Apple, Meta, Google, NVIDIA) and AI-powered educational software (MagicSchool, Mindgrasp, Kami) — to benchmark a proposed AR solution against existing tools and investment trends. 
-- **Financial Analysis:** Built a financial model estimating implementation costs across three solution areas (education, navigation, student life) for short-term (1+ year) and long-term (5–10 year) horizons, with total costs ranging from $135K to $2.5M depending on scope.
+### My Contribution: 
+- Did a lot of research on the AR/AI markets, looking at different tools, their functionalities, successes and failures, etc... 
+- From here, I built (or at least tried to build lol) a financial model estimating implementation costs of our proposed technology (short-term and long-term).
+- Check out the slide deck.
