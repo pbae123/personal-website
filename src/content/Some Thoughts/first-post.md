@@ -1,6 +1,6 @@
 ---
 title: "First Post"
-date: 2026-06-17
+date: 2026-06-19
 excerpt: "A short summary of what this post is about."
 ---
 
