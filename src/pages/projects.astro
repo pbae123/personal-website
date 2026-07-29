@@ -24,7 +24,7 @@ const byYear = (year: number) =>
         {year === 2024 && (
           <p style="font-size: 22px;">Everyone starts somewhere.</p>
         )}
-        <div class="grid gap-6 max-h-[640px] overflow-y-auto pr-2 scroll-smooth thin-scroll">
+        <div class="grid gap-6 max-h-[640px] overflow-y-auto pr-2 pb-2 scroll-smooth thin-scroll">
           {byYear(year).map((project) => (
             <div class="border border-gray-200 rounded-lg p-6">
               <h2 class="font-semibold mb-2" style="font-size: 22px">
