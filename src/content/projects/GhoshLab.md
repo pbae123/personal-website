@@ -1,7 +1,7 @@
 ---
 title: "Ghosh Lab: Undergraduate Researcher"
 description: "Full stack work for SigCap + analzying/conducting wireless measurements"
-tags: ["Django", "React", "Postgres"]
+tags: ["Django", "React", "Postgres", "Databases"]
 year: 2026
 demos:
   - url: "https://sigcap.crc.nd.edu"
