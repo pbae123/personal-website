@@ -21,8 +21,21 @@ const { Content } = await render(post);
       {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
     </p>
     <h1 class="text-4xl font-bold mb-8">{post.data.title}</h1>
-    <div class="prose max-w-none text-black prose-a:text-black">
+    <div class="prose max-w-none" style="font-size: 20px">
       <Content />
     </div>
   </main>
 </Layout>
+
+<style>
+  :global(.prose > :is(p, ul, ol)) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  :global(.prose li),
+  :global(.prose li > p) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+</style>
