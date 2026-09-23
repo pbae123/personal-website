@@ -16,3 +16,5 @@ semester: Spring 2025
 - Did a lot of research on the AR/AI markets, looking at different tools, their functionalities, successes and failures, etc... 
 - From here, I built (or at least tried to build lol) a financial model estimating implementation costs of our proposed technology (short-term and long-term).
 - Check out the slide deck.
+
+![Deloitte consulting case team](/images/deloittePhoto.jpeg)

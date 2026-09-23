@@ -18,3 +18,5 @@ order: 1
 ### My Contribution:
 - I developed a RAG pipeline using the OpenAI API and then conducted comparative analysis between the OpenAI and Gemini API RAG's.
 - Both tools were integrated into an MCP server by my other teammate. 
+
+No photo... :(

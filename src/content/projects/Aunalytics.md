@@ -16,3 +16,5 @@ order: 2
 ### My Contribution: 
 - Responsible for the frontend as well as connecting the frontend to the backend w/ FastAPI.
 - Was also able spread some knowledge to the team about RAG as I was simultaneously doing research during that time.
+
+![Aunalytics project team](/images/aunalyticsPhoto.jpeg)
