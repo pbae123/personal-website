@@ -21,8 +21,8 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="theme-toggle text-[22px] sm:text-[26px]"
-      style={{ cursor: "pointer", background: "none", border: "none", padding: 0, transform: "translateY(4px)" }}
+      className="theme-toggle"
+      style={{ cursor: "pointer", background: "none", border: "none", padding: 0, fontSize: "25px", transform: "translateY(4px)" }}
     >
       <Classic toggled={isDark || undefined} duration={isMounted.current ? 750 : 0} />
     </button>

@@ -7,19 +7,19 @@ const sorted = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime(
 ---
 
 <Layout>
-  <main class="max-w-4xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
-    <a href="/" class="hover:underline text-[14px] sm:text-[16px] mb-6 sm:mb-8 block">← Let's go back home</a>
-    <h1 class="font-bold mb-2 text-[28px] sm:text-[36px]">Some Thoughts</h1>
-    <p class="mb-6 text-[19px] sm:mb-8 sm:text-[24px]">This is by no means supposed to be revolutionary 🥀. Just a little preview on what's been going on in my mind and also a way for me to practice my writing.</p>
+  <main class="max-w-[748px] mx-auto px-6 py-12">
+    <a href="/" class="hover:underline text-[16px] mb-8 block">← Let's go back home</a>
+    <h1 class="font-bold mb-2" style="font-size: 29px">Some Thoughts</h1>
+    <p class="mb-8" style="font-size: 19px">This is by no means supposed to be revolutionary 🥀. Just a little preview on what's been going on in my mind and also a way for me to practice my writing.</p>
 
     <div class="flex flex-col gap-3">
       {sorted.map((post) => (
         <div class="flex items-baseline gap-3">
-          <span class="text-[18px] sm:text-[23px]" style="color: #6F6E69">
+          <span style="font-size: 19px; color: #6F6E69">
             {String(post.data.date.getUTCMonth() + 1).padStart(2, '0')} <span style="position: relative; top: -0.06em">·</span> {String(post.data.date.getUTCDate()).padStart(2, '0')} <span style="position: relative; top: -0.06em">·</span> {post.data.date.getUTCFullYear()}
           </span>
-          <span class="text-[18px] sm:text-[23px]" style="color: black">~</span>
-          <a href={`/blog/${post.id}`} class="hover:underline text-[18px] sm:text-[23px]">{post.data.title}</a>
+          <span style="font-size: 19px; color: black">~</span>
+          <a href={`/blog/${post.id}`} class="hover:underline" style="font-size: 19px">{post.data.title}</a>
         </div>
       ))}
     </div>
