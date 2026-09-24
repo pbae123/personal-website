@@ -1,6 +1,6 @@
 ---
 title: "KorGuard"
-description: "Helpd co-found an AI compliance startup. Won $25,000 at a pitch competition and secured a hospital pilot"
+description: "Helped co-found an AI compliance startup. Won $25,000 at a pitch competition and secured a hospital pilot"
 tags: ["Entrepreneurship", "Product Design", ]
 year: 2026
 demos:
@@ -20,5 +20,4 @@ order: 2
 - Helped coordinate the hospital pilot, incorporating feedback from healthcare professionals to refine the product for real-world use.
 
 ![KorGuard team](/images/korguardPhoto.jpeg)
-
 
