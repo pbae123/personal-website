@@ -38,3 +38,107 @@ button * {
   cursor: pointer;
 }
 
+@media (max-width: 639px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    max-width: none !important;
+    padding: 1.75rem 1rem 1rem !important;
+  }
+
+  header > a,
+  header nav a {
+    font-size: 18px !important;
+  }
+
+  header nav {
+    gap: 0.75rem !important;
+  }
+
+  .theme-toggle {
+    font-size: 20px !important;
+    transform: translateY(3px) !important;
+  }
+
+  header + hr {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    margin-top: -0.25rem !important;
+  }
+
+  .home-page {
+    height: auto !important;
+    min-height: 100vh;
+    max-width: none !important;
+    padding: 0.75rem 1rem 2rem !important;
+    overflow: visible !important;
+  }
+
+  .home-page h1 {
+    font-size: 26px !important;
+  }
+
+  .home-page main > p,
+  .home-page li a {
+    font-size: 17px !important;
+  }
+
+  .home-page > div {
+    flex: none !important;
+    margin-top: 2rem !important;
+  }
+
+  .home-tree {
+    height: 250px !important;
+    transform: translateY(0) !important;
+  }
+
+  .mobile-page {
+    max-width: none !important;
+    padding: 2rem 1rem !important;
+  }
+
+  .mobile-page > a:first-child {
+    display: block;
+    margin-bottom: 1.5rem !important;
+    font-size: 14px !important;
+  }
+
+  .mobile-page h1 {
+    margin-bottom: 1.5rem !important;
+    font-size: 26px !important;
+  }
+
+  .mobile-page h2 {
+    font-size: 18px !important;
+  }
+
+  .mobile-page p,
+  .mobile-page .prose,
+  .post-list span,
+  .post-list a {
+    font-size: 17px !important;
+  }
+
+  .project-list {
+    max-height: none !important;
+    overflow: visible !important;
+    gap: 1.25rem !important;
+    padding-right: 0 !important;
+  }
+
+  .project-card {
+    padding: 1.25rem !important;
+  }
+
+  .project-card p {
+    font-size: 16px !important;
+  }
+
+  .project-card span,
+  .project-card a {
+    font-size: 14px !important;
+  }
+}

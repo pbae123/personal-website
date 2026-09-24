@@ -13,7 +13,7 @@ const byYear = (year: number) =>
 ---
 
 <Layout>
-  <main class="max-w-[748px] mx-auto px-6 py-12">
+  <main class="mobile-page max-w-[748px] mx-auto px-6 py-12">
     <a href="/" class="hover:underline text-[16px] mb-8 block">← Let's go back home</a>
     <h1 class="font-bold mb-8" style="font-size: 29px">Work/Projects</h1>
 
@@ -24,9 +24,9 @@ const byYear = (year: number) =>
         {year === 2024 && (
           <p style="font-size: 19px;">Everyone starts somewhere.</p>
         )}
-        <div class="grid gap-6 max-h-[640px] overflow-y-auto pr-2 pb-2 scroll-smooth thin-scroll">
+        <div class="project-list grid gap-6 max-h-[640px] overflow-y-auto pr-2 pb-2 scroll-smooth thin-scroll">
           {byYear(year).map((project) => (
-            <div class="border border-gray-200 rounded-lg p-6">
+            <div class="project-card border border-gray-200 rounded-lg p-6">
               <h2 class="font-semibold mb-2" style="font-size: 19px">
                 <a href={`/projects/${project.id}`} class="hover:underline">{project.data.title}</a>
               </h2>
