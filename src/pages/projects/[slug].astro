@@ -15,31 +15,31 @@ const { Content } = await render(project);
 ---
 
 <Layout>
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <a href="/projects" class="hover:underline mb-8 block" style="font-size: 16px">← Back to Projects</a>
-    <h1 class="font-bold mb-2" style="font-size: 36px">{project.data.title}</h1>
-    <p class="mb-6" style="font-size: 18px">{project.data.year}</p>
+  <main class="max-w-4xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
+    <a href="/projects" class="hover:underline mb-6 block text-[14px] sm:mb-8 sm:text-[16px]">← Back to Projects</a>
+    <h1 class="font-bold mb-2 text-[28px] sm:text-[36px]">{project.data.title}</h1>
+    <p class="mb-5 text-[16px] sm:mb-6 sm:text-[18px]">{project.data.year}</p>
     <div class="flex gap-2 mb-6">
       {project.data.tags.map((tag) => (
-        <span class="bg-gray-100 px-2 py-1 rounded" style="font-size: 14px">{tag}</span>
+        <span class="bg-gray-100 px-2 py-1 rounded text-[13px] sm:text-[14px]">{tag}</span>
       ))}
     </div>
-    <div class="prose max-w-none" style="font-size: 20px">
+    <div class="prose max-w-none text-[18px] sm:text-[20px]">
       <Content />
     </div>
     <div class="flex items-center gap-2 mt-8">
       {project.data.github && (
-        <a href={project.data.github} class="hover:underline" style="font-size: 14px" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href={project.data.github} class="hover:underline text-[13px] sm:text-[14px]" target="_blank" rel="noopener noreferrer">GitHub</a>
       )}
       {project.data.demos && project.data.demos.map((d, i) => (
         <>
-          {(i > 0 || project.data.github) && <span style="font-size: 20px">|</span>}
-          <a href={d.url} class="hover:underline font-bold" style="font-size: 20px" target="_blank" rel="noopener noreferrer">{d.label}</a>
+          {(i > 0 || project.data.github) && <span class="text-[18px] sm:text-[20px]">|</span>}
+          <a href={d.url} class="hover:underline font-bold text-[18px] sm:text-[20px]" target="_blank" rel="noopener noreferrer">{d.label}</a>
         </>
       ))}
-      {project.data.demos && project.data.demos.length > 0 && project.data.semester && <span style="font-size: 20px">|</span>}
+      {project.data.demos && project.data.demos.length > 0 && project.data.semester && <span class="text-[18px] sm:text-[20px]">|</span>}
       {project.data.semester && (
-        <span class="font-bold" style="font-size: 20px">{project.data.semester}</span>
+        <span class="font-bold text-[18px] sm:text-[20px]">{project.data.semester}</span>
       )}
     </div>
   </main>
